@@ -1,0 +1,19 @@
+# ── Secrets — NEVER commit these ──
+.env
+*.env.local
+*.env.*.local
+
+# ── OS junk ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor ──
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Node (if you add a build step later) ──
+node_modules/
+dist/

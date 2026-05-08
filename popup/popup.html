@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms Guardian</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <div class="app">
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <svg class="shield-logo" viewBox="0 0 36 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 2L4 8V20C4 28.8 10.4 37 18 39C25.6 37 32 28.8 32 20V8L18 2Z" fill="url(#shieldGrad)" stroke="none"/>
+          <path d="M13 20L16.5 23.5L23 17" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="shieldGrad" x1="4" y1="2" x2="32" y2="39" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#6EE7B7"/>
+              <stop offset="100%" stop-color="#059669"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo-text">Terms<strong>Guardian</strong></span>
+      </div>
+      <div class="badge" id="pageTypeBadge">—</div>
+    </header>
+
+    <!-- Idle state -->
+    <div class="state" id="stateIdle">
+      <div class="idle-art">
+        <div class="pulse-ring"></div>
+        <svg class="idle-shield" viewBox="0 0 60 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 4L6 14V32C6 48 17 62 30 66C43 62 54 48 54 32V14L30 4Z" fill="url(#idleGrad)" opacity="0.18"/>
+          <path d="M30 4L6 14V32C6 48 17 62 30 66C43 62 54 48 54 32V14L30 4Z" stroke="url(#idleGrad)" stroke-width="2"/>
+          <defs>
+            <linearGradient id="idleGrad" x1="6" y1="4" x2="54" y2="66" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#6EE7B7"/>
+              <stop offset="100%" stop-color="#059669"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <p class="idle-label">Ready to analyse this page</p>
+      <button class="btn-primary" id="btnAnalyse">Analyse Page</button>
+    </div>
+
+    <!-- Loading state -->
+    <div class="state hidden" id="stateLoading">
+      <div class="loader-wrap">
+        <svg class="spinner-shield" viewBox="0 0 60 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 4L6 14V32C6 48 17 62 30 66C43 62 54 48 54 32V14L30 4Z" fill="url(#loadGrad)" opacity="0.12"/>
+          <path d="M30 4L6 14V32C6 48 17 62 30 66C43 62 54 48 54 32V14L30 4Z" stroke="url(#loadGrad)" stroke-width="2" stroke-dasharray="120" stroke-dashoffset="120" class="shield-trace"/>
+          <defs>
+            <linearGradient id="loadGrad" x1="6" y1="4" x2="54" y2="66" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#6EE7B7"/>
+              <stop offset="100%" stop-color="#059669"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <p class="loading-text">Reading the fine print<span class="dots"></span></p>
+    </div>
+
+    <!-- Result state -->
+    <div class="state hidden" id="stateResult">
+
+      <!-- Score ring -->
+      <div class="score-section">
+        <svg class="score-ring" viewBox="0 0 120 120">
+          <circle class="ring-bg" cx="60" cy="60" r="50"/>
+          <circle class="ring-fill" id="ringFill" cx="60" cy="60" r="50"
+            stroke-dasharray="314" stroke-dashoffset="314"
+            transform="rotate(-90 60 60)"/>
+          <text class="ring-score" id="ringScore" x="60" y="56" text-anchor="middle" dominant-baseline="middle">—</text>
+          <text class="ring-label" x="60" y="74" text-anchor="middle">/ 10</text>
+        </svg>
+        <div class="verdict-wrap">
+          <div class="verdict-icon" id="verdictIcon">🛡️</div>
+          <div class="verdict-text" id="verdictText">—</div>
+          <div class="verdict-sub" id="verdictSub">—</div>
+        </div>
+      </div>
+
+      <!-- Flags -->
+      <div class="flags-section" id="flagsSection"></div>
+
+      <!-- Summary -->
+      <div class="summary-box">
+        <div class="summary-label">Summary</div>
+        <p class="summary-text" id="summaryText">—</p>
+      </div>
+
+      <!-- Recommendation -->
+      <div class="rec-box" id="recBox">
+        <span class="rec-icon" id="recIcon">ℹ️</span>
+        <span class="rec-text" id="recText">—</span>
+      </div>
+
+      <button class="btn-ghost" id="btnReset">← Analyse another page</button>
+    </div>
+
+    <!-- Error state -->
+    <div class="state hidden" id="stateError">
+      <div class="error-icon">⚠️</div>
+      <p class="error-msg" id="errorMsg">Something went wrong.</p>
+      <button class="btn-ghost" id="btnRetry">Try again</button>
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
