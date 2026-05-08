@@ -19,7 +19,8 @@
 
 ## 📸 Screenshot
 
-> *(Add a screenshot of your popup here once you load the extension)*
+> <img width="438" height="407" alt="image" src="https://github.com/user-attachments/assets/765763eb-94fd-4d7d-8825-b52ba15d5ded" />
+
 
 ---
 
@@ -152,4 +153,4 @@ MIT — free to use, modify, and distribute.
 
 ## 🙏 Credits
 
-Built with ❤️ by [YOUR NAME]. Powered by [Google Gemini](https://ai.google.dev/) (or your chosen LLM).
+Built  by Sumanyu Deshpande. Powered by [Google Gemini](https://ai.google.dev/) (or your chosen LLM).
