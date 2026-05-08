@@ -1,30 +1,30 @@
 # 🛡️ Terms Guardian
 
 > **Never blindly agree to Terms of Service again.**
-> Terms Guardian is a Chrome extension that reads, analyses, and rates any Terms of Service or Privacy Policy page — giving you a plain-English summary and a trust score before you sign up.
+> Terms Guardian is a Chrome extension that helps users understand Terms of Service and Privacy Policies without reading pages of legal jargon.
+> It scans the current page, extracts the important points, generates a plain-English summary using an LLM, and gives the platform a trust rating based on potentially concerning clauses.
+---
+
+##  Features
+
+-  **Auto-detects** Terms of Service and Privacy Policy pages
+-  **AI-powered summary** — plain English, no legal jargon
+-  **Trust score** out of 10 with a visual ring
+-  **Flags** for key concerns: data sharing, ads, deletion rights, arbitration clauses, and more
+-  **Clear recommendation** — Safe / Caution / Danger
+-  Works on **any page** — not just ToS pages
+-  **Bring your own API key** — works with Gemini, or swap in any LLM
 
 ---
 
-## ✨ Features
-
-- 🔍 **Auto-detects** Terms of Service and Privacy Policy pages
-- 🤖 **AI-powered summary** — plain English, no legal jargon
-- 🛡️ **Trust score** out of 10 with a visual ring
-- 🚩 **Flags** for key concerns: data sharing, ads, deletion rights, arbitration clauses, and more
-- ✅ **Clear recommendation** — Safe / Caution / Danger
-- ⚡ Works on **any page** — not just ToS pages
-- 🔑 **Bring your own API key** — works with Gemini, or swap in any LLM
-
----
-
-## 📸 Screenshot
+## How it looks !!
 
 > <img width="438" height="407" alt="image" src="https://github.com/user-attachments/assets/765763eb-94fd-4d7d-8825-b52ba15d5ded" />
 
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the repository
 
@@ -78,7 +78,7 @@ const MODEL_URL = "YOUR_MODEL_API_URL_HERE"; // ← paste your model URL
 
 ---
 
-## 🧩 Project Structure
+##  Project Structure
 
 ```
 terms-guardian/
@@ -98,7 +98,7 @@ terms-guardian/
 
 ---
 
-## 🔄 Using a Different LLM
+##  Using a Different LLM
 
 The AI call lives in `popup/popup.js` inside the `callAI()` function. To switch models:
 
@@ -118,7 +118,7 @@ body: JSON.stringify({
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contributing 🤝
 
 Pull requests are welcome! If you add support for a new LLM or improve the UI, feel free to open a PR.
 
@@ -145,12 +145,12 @@ git push
 
 ---
 
-## 📄 License
+##  License
 
 MIT — free to use, modify, and distribute.
 
 ---
 
-## 🙏 Credits
+## 🙏 Credits 🙏
 
 Built  by Sumanyu Deshpande. Powered by [Google Gemini](https://ai.google.dev/) (or your chosen LLM).
