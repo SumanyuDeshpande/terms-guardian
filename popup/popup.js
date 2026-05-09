@@ -2,8 +2,8 @@
 
 // ── Config ──────────────────────────────────────────────────────────────────
 // local testing ONLY.
-const API_KEY   = "AIzaSyDIvA8e9_pN9w-8YcLUXC9n1kE8m0_jpgo";         
-const MODEL_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";   
+const API_KEY   = " ADD YOUR API KEY";         
+const MODEL_URL = "ADD YOUR MODEL URL";   
 
 // ── DOM refs ────────────────────────────────────────────────────────────────
 const stateIdle    = document.getElementById("stateIdle");
