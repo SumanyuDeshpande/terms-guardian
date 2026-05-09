@@ -2,8 +2,8 @@
 
 // ── Config ──────────────────────────────────────────────────────────────────
 // local testing ONLY.
-const API_KEY   = " ADD YOUR API KEY";         
-const MODEL_URL = "ADD YOUR MODEL URL";   
+const API_KEY   = " YOUR_API_KEY_HERE ";         
+const MODEL_URL = "YOUR_MODEL_URL_HERE";   
 
 // ── DOM refs ────────────────────────────────────────────────────────────────
 const stateIdle    = document.getElementById("stateIdle");
