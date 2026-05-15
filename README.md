@@ -29,7 +29,7 @@
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/terms-guardian.git
+git clone https://github.com/SumanyuDeshpande/terms-guardian.git
 cd terms-guardian
 ```
 
